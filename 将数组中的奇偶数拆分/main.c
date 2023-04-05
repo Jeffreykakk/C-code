@@ -21,10 +21,10 @@ int main()
 	printf("origin array -> ");
     for(loop = 0; loop < 10; loop++)
 	printf(" %d", array[loop]);  
-    printf("\nodd  -> ");
+    printf("\neven -> ");
     for(loop = 0; loop < e; loop++)
 	printf(" %d", even[loop]);   
-    printf("\neven -> ");
+    printf("\nodd  -> ");
     for(loop = 0; loop < d; loop++)
 	printf(" %d", odd[loop]);   
     return 0;
