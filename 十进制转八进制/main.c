@@ -18,8 +18,6 @@ int main()
 	int Decimalnumber;
     printf("Decima lnumber: ");
     scanf("%d", &Decimalnumber);
- 
     printf("Decima lnumber %d --> Octal number %d", Decimalnumber, convert(Decimalnumber));
- 
     return 0;
 }

@@ -10,7 +10,6 @@ long long convert(int Octalnumber)
         ++i;
         Octalnumber/=10;
     }
-	i = 1;
     return Decimalnumber;
 }
 

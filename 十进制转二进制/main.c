@@ -4,7 +4,7 @@
 long long convert(int n)
 {
 	long long Binarynumber = 0;
-    int remainder, i = 1, step = 1;
+    int remainder, i = 1;
     while (n!=0)
 	{
 		remainder = n%2;
