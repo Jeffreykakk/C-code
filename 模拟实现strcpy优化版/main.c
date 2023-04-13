@@ -1,13 +1,18 @@
 #include <stdio.h>
+#include <assert.h>
 
-struct Point
+void mystrcpy(char* des,const char*sou)
 {
-	int x;
-	int y;
-}p1;
+	assert(des);
+	assert(sou);
+	while(*des++=*sou++);
+}
 
-int main()
+int main() 
 {
-	struct Point p2;
+	char str1[20]="abcdef";
+	char str2[20]="hello";
+	mystrcpy(str1,str2);
+	printf("%s",str1);
 	return 0;
 }
