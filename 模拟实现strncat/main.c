@@ -10,15 +10,7 @@ char* mystrncat(char* des,char* sou,int n)
 		n--;
 		*des++=*sou++;
 	}
-	if(n==0)
 	*des='\0';
-	else
-	{
-		while(n--)
-		{
-			*des='\0';
-		}
-	}
 	return str;
 }
 
