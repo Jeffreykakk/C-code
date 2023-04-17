@@ -2,6 +2,8 @@
 
 int judge_friend(int a, int b)
 {
+	if(a==b)
+	return 0;
 	int i=0,sum_a=0,sum_b=0;
 	for(i=1;i<a;i++)
 	{
