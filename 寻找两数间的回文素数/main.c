@@ -4,7 +4,7 @@
 int isprime(int n)
 {
     int i=0;
-    if(n==1)
+    if(n<2)
     return 0;
     for(i=2;i<=sqrt(n);i++)
     {
