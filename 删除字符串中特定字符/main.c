@@ -14,6 +14,7 @@ char* deletechar(char str[],char ch)
                 str[j]=str[j+1];
                 j++;
             }
+			i--;
         }
     }
     return start;
