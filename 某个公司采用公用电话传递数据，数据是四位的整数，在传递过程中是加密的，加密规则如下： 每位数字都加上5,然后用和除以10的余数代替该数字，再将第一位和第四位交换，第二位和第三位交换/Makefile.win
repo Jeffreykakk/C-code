@@ -1,0 +1,28 @@
+# Project: 某个公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的，加密规则如下： 每位数字都加上5,然后用和除以10的余数代替该数字，再将第一位和第四位交换，第二位和第三位交换
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o
+LINKOBJ  = main.o
+LIBS     = -L"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/lib" -L"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/include" -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/include" -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Document ontology/Dev/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = "某个公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的，加密规则如下： 每位数字都加上5,然后用和除以10的余数代替该数字，再将第一位和第四位交换，第二位和第三位交换.exe"
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = D:\Document ontology\Dev\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
