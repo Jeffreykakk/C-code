@@ -28,7 +28,7 @@ int main()
 	printf("%d numbers:",n);
 	for(i=0;i<n;i++)
 	scanf("%d",&arr[i]);
-	swap(arr,n,m);
+	swap(arr,n,m%n);
 	for(i=0;i<n;i++)
 	printf("%d ",arr[i]);
 	return 0;

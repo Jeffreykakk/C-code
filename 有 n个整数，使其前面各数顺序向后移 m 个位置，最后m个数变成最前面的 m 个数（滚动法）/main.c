@@ -2,6 +2,7 @@
 
 void move(int arr[],int n, int m)
 {
+	m=m%n;
 	while(m--)
 	{
 		int end=arr[n-1],i=0;
