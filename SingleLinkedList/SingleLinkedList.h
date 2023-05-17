@@ -20,3 +20,4 @@ void SLLPushFront(Node** pphead,SLLdatatype x);
 void SLLPopFront(Node** pphead);
 void SLLInsert(Node** pphead,SLLdatatype y,SLLdatatype x);
 void SLLErease(Node** pphead,SLLdatatype x);
+void SLLDestroy(Node* phead);

@@ -138,3 +138,15 @@ void SLLErease(Node** pphead,SLLdatatype y)               //任意位置删除
         }
     }
 }
+
+void SLLDestroy(Node* phead)                              //链表的销毁
+{
+    assert(phead);                                        //链表为空的情况
+    Node* cur=phead;
+    while(cur)
+    {
+        Node* next=cur->next;
+        free(cur);
+        cur=next;
+    }
+}

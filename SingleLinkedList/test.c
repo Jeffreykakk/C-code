@@ -22,6 +22,9 @@ void test()
     SLLPrint(plist);
     SLLErease(&plist,1);
     SLLPrint(plist);
+    SLLDestroy(plist);
+    plist=NULL;
+    SLLPrint(plist);
 }
 
 int main()
