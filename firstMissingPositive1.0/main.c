@@ -14,8 +14,13 @@ int cmp(const void* e1,const void* e2)
 
 int firstMissingPositive(int* nums, int numsSize)
 {
+    int i=0,checkone=1;         //由题可得，缺失的正数肯定在[1,n+1]的闭区间内
+    for(i=0;i<numsSize;i++)     //故将所有的负数和大于n的数转化成0，防止数据的溢出          
+    {
+        if(nums[i]>numsSize||nums[i]<0)  
+        nums[i]=0;
+    }
     qsort(nums,numsSize,sizeof(int),cmp);
-    int i=0,checkone=1;
     for(i=0;i<numsSize;i++)
     {
         if(nums[i]>0)
