@@ -20,3 +20,4 @@ void SLPopFront(SL* psl);
 void SLInsert(SL* psl,int pos,SLdatatype dat);
 void SLErase(SL* psl,int pos);
 int SLSearch(SL* psl,int dat);
+void SLDestroy(SL* psl);

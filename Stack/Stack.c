@@ -12,7 +12,6 @@ void StackDestroy(stack* st)        //栈的销毁
     assert(st);
     free(st->data);
     st->capacity=st->top=0;
-    free(st);
 }
 
 bool StackEmpty(stack* st)          //检查栈是否为空

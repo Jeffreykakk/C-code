@@ -25,6 +25,12 @@ void SLinit(SL* psl)                                //将顺序表初始化
     psl->data=NULL;
 }
 
+void SLDestroy(SL* psl)                             //顺序表的销毁
+{
+    free(psl->data);
+    psl->capacity=psl->size=0;
+}
+
 void SLPrint(SL* psl)                               //打印顺序表储存的数据
 {
     assert(psl);

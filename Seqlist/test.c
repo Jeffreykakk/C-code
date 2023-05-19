@@ -33,6 +33,7 @@ int main()
     SL sl={0};
     SLinit(&sl);
     SLtest(&sl);
+    SLDestroy(&sl);
     system("pause");
     return 0;
 }
