@@ -29,10 +29,13 @@ void DLLPrint(Node* head)
     Node* cur=head->next;
     while(cur!=head)
     {
+        if(cur->next!=head)
         printf("%d->",cur->data);
+        else
+        printf("%d",cur->data);
         cur=cur->next;
     }
-    printf("NULL\n");
+    printf("\n");
 }
 
 void DLLPushBack(Node* head,DLLdatatype x)               //尾插
