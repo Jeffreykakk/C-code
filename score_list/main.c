@@ -25,10 +25,10 @@ int cmp(const void* e1,const void *e2)        //排序函数
     int i=0;
     for(i=0;i<course;i++)
     {
-        average1+=(*(int*)e1);
-        average2+=(*(int*)e1);
+        average1+=(*((int*)e1+i));
+        average2+=(*((int*)e2+i));
     }
-    return average1-average2;       //按平均成绩排序
+    return average2-average1;       //按平均成绩排序
 }
 
 void putscore(int arr[student][course])         //打印学生的成绩
