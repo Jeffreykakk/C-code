@@ -17,6 +17,7 @@ BTNode* BuyNode(BTDataType x)
     exit(-1);
     newnode->left=newnode->right=NULL;
     newnode->data=x;
+    return newnode;
 }
 
 BTNode* CreateBinaryTree()
