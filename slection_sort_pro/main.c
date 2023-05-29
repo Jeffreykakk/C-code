@@ -34,6 +34,9 @@ void sort(int arr[],int n)
             arr[left]=arr[pos_min];
             arr[pos_min]=tmp;
         }
+        //如果left与pos_max重叠，在第一次交换后，要更新pos_max的位置
+        if(pos_max==left)
+        pos_max=pos_min;
         if(arr[right]!=max)
         {
             int tmp=arr[right];
@@ -47,7 +50,7 @@ void sort(int arr[],int n)
 
 int main()
 {
-    int arr[10]={9,7,8,5,5,4,3,2,1,0};
+    int arr[10]={9,1,7,8,6,5,4,3,2,0};
     int sz=sizeof(arr)/sizeof(arr[0]);
     sort(arr,sz);
     int i=0;
