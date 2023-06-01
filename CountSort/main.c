@@ -24,7 +24,7 @@ void CountSort(int* arr,int n)
     for(i=0;i<range;i++)
     {
         while(count[i]--)
-        arr[j++]=i+range;
+        arr[j++]=i+min;
     }
     free(count);
 }
