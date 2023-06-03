@@ -42,7 +42,7 @@ int dayofyear(Date* date)
             if(i==1||i==3||i==5||i==7||i==8||i==10||i==12)
             sum+=31;
             if(i==4||i==6||i==9||i==11)
-            sum+=31;
+            sum+=30;
             if(i==2)
             sum+=29;
         }
@@ -55,7 +55,7 @@ int dayofyear(Date* date)
             if(i==1||i==3||i==5||i==7||i==8||i==10||i==12)
             sum+=31;
             if(i==4||i==6||i==9||i==11)
-            sum+=31;
+            sum+=30;
             if(i==2)
             sum+=28;
         }
