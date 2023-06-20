@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 #include <windows.h>
 
 // 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点
@@ -55,6 +56,18 @@ struct ListNode *swapPairs(struct ListNode *head)
     return newhead;
 }
 
+void SLLDestroy(struct ListNode *phead)
+{
+    assert(phead);
+    struct ListNode *cur = phead;
+    while (cur)
+    {
+        struct ListNode *next = cur->next;
+        free(cur);
+        cur = next;
+    }
+}
+
 int main()
 {
     struct ListNode* n1=Buynode(1);
@@ -71,6 +84,7 @@ int main()
     SLLPrint(head);
     head=swapPairs(head);
     SLLPrint(head);
+    SLLDestroy(head);
     system("pause");
     return 0;
 }
