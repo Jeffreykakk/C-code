@@ -23,37 +23,40 @@ void print(node* head)
     printf("NULL\n");
 }
 
-node* partition(node* pHead, int x)
+struct ListNode *partition(struct ListNode *head, int x)
 {
-    node* greaterhead=(node*)malloc(sizeof(node));
-    node* minorhead=(node*)malloc(sizeof(node));
-    node* greatertail=greaterhead;
-    node* minortail=minorhead;
-    node* cur=pHead;
-    while(cur)
+    if (head == NULL)
+        return head;
+    struct ListNode *greaterhead = (struct ListNode *)malloc(sizeof(struct ListNode));
+    struct ListNode *minorhead = (struct ListNode *)malloc(sizeof(struct ListNode));
+    greaterhead->next = NULL;
+    minorhead->next = NULL;
+    struct ListNode *greatertail = greaterhead;
+    struct ListNode *minortail = minorhead;
+    struct ListNode *cur = head;
+    while (cur)
     {
-        if(cur->val<x)
+        if (cur->val < x)
         {
-            minortail->next=cur;
-            minortail=minortail->next;
-            cur=cur->next;
-            minortail->next=NULL;
+            minortail->next = cur;
+            minortail = minortail->next;
+            cur = cur->next;
+            minortail->next = NULL;
         }
         else
         {
-            greatertail->next=cur;
-            greatertail=greatertail->next;
-            cur=cur->next;
-            greatertail->next=NULL;
+            greatertail->next = cur;
+            greatertail = greatertail->next;
+            cur = cur->next;
+            greatertail->next = NULL;
         }
     }
-    minortail->next=greaterhead->next;
-    pHead=minorhead->next;
+    minortail->next = greaterhead->next;
+    head = minorhead->next;
     free(greaterhead);
     free(minorhead);
-    return pHead;
+    return head;
 }
-
 
 int main()
 {
