@@ -1,13 +1,17 @@
 #include <stdio.h>
 
-int count(const char* str)
+int countSegments(char * s)
 {
+    if(*s=='\0')		//""
+    return 0;
     int count=0,flag=1;
-    while(*str==' ')
-    str++;
-	while(*str)
+    while(*s==' ')		//"  "
+    s++;
+    if(*s=='\0')
+    return 0;
+	while(*s)
     {
-        if(*str==' ')
+        if(*s==' ')
         {
         	if(flag==1)
         	{
@@ -17,10 +21,11 @@ int count(const char* str)
 		}
 		else
 		flag=1;
-        str++;
+        s++;
     }
     if(flag==1)
     return ++count;
+    else
     return count;
 }
 
@@ -28,7 +33,7 @@ int main()
 {
     char str[50]={0};
     gets(str);    
-    int ret=count(str);
+    int ret=countSegments(str);
     printf("%d\n",ret);
     return 0;
 }
